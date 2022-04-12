@@ -1,14 +1,17 @@
 import React from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 import { Routing } from './routing/Routing';
-import { Link } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
+import {Header} from "./components/Header/Header";
 
 export const App = () => {
   return (
     <div className="app">
-     <Routing />
+        <BrowserRouter>
+            <Header />
+            <Routing />
+        </BrowserRouter>
     </div>
   );
 }
